@@ -1,4 +1,5 @@
-# meteor
+meteor
+======
 
 ``meteor`` is a library for collecting market data from popular cryptocurrency exchanges via web socket using Python 3.8 or above.
 
