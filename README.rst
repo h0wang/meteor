@@ -6,6 +6,7 @@ Basic Useage
 ------------
 
 .. code-block:: python
+
     import asyncio
 
     from meteor import Subscriber
