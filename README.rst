@@ -18,5 +18,10 @@ Basic Useage
 
     subscription = CoinbaseTradeSubscription("BTCUSD")
     subscriber = Subscriber(subscription, queue)
+
     event_loop.run_until_complete(subscriber.subscribe())
 
+
+Demonstration
+
+    $ python -m meteor --currency_pair BTCUSD ETHGBP
