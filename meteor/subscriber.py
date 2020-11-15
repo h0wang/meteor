@@ -16,7 +16,6 @@ class Subscriber:
             await socket.send(request)
             async for msg in socket:
                 parsed = parser(msg)
-                # print(msg)
                 if parsed is not None:
-                    # print(parsed)
-                    await self.queue.put(parsed)
+                    for item in parsed:
+                        await self.queue.put(item)

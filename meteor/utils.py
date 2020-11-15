@@ -5,18 +5,19 @@ from .api import CurrencyPair, Side
 
 
 def check_side(value: typing.Union[int, str, Side]) -> Side:
-    if isinstance(value, str) and value.lower() in ("bid", "buy", "bids"):
-        return Side.BID
-    elif isinstance(value, str) and value.lower() in ("ask", "sell", "asks"):
-        return Side.ASK
+    if isinstance(value, str):
+        value = value.lower()
+        if value in ("bid", "buy", "bids", "b"):
+            return Side.BID
+        elif value in ("ask", "sell", "asks", "a"):
+            return Side.ASK
     elif isinstance(value, int) and value == 1:
         return Side.BID
     elif isinstance(value, int) and value == -1:
         return Side.ASK
     elif isinstance(value, Side):
         return value
-    else:
-        raise ValueError(f"Unrecognised side `{value}`")
+    raise ValueError(f"Unrecognised side `{value}`")
 
 
 def check_currency_pair(*args, **kwargs) -> CurrencyPair:
@@ -29,6 +30,8 @@ def check_currency_pair(*args, **kwargs) -> CurrencyPair:
 
     if "product_id" in kwargs:
         product_id = kwargs["product_id"]
+    elif "currency_pair" in kwargs:
+        product_id = kwargs["currency_pair"]
     elif len(args) == 1:
         product_id, *_ = args
     elif len(args) >= 2 and len(args[0]) in [3, 4] and len(args[1]) in [3, 4]:

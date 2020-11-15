@@ -9,6 +9,7 @@ def test_bid():
     assert check_side("bids") == Side.BID
     assert check_side(1) == Side.BID
     assert check_side("BID") == Side.BID
+    assert check_side("b") == Side.BID
     assert check_side(Side.BID) == Side.BID
 
 
@@ -18,6 +19,7 @@ def test_ask():
     assert check_side("asks") == Side.ASK
     assert check_side(-1) == Side.ASK
     assert check_side("SELL") == Side.ASK
+    assert check_side("a") == Side.ASK
     assert check_side(Side.ASK) == Side.ASK
 
 
