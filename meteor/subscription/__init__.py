@@ -1,4 +1,6 @@
-from .impl import CoinbaseTradeSubscription
-from .impl import KrakenTradeSubscription
+from .impl import (BitstampTradeSubscription, CoinbaseTradeSubscription,
+                   KrakenTradeSubscription)
 
-__all__ = ["CoinbaseTradeSubscription", "KrakenTradeSubscription"]
+__all__ = ["BitstampTradeSubscription",
+           "CoinbaseTradeSubscription",
+           "KrakenTradeSubscription"]
