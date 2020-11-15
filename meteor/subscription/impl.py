@@ -131,19 +131,5 @@ class BitstampTradeSubscription(Subscription, BitstampMixin):
                               price=price, size=size, timestamp=timestamp,
                               source=self.source)
                 return [trade]
-            print(params)
-            # msg_type = params["type"]
-            # if msg_type == "match":
-            #     currency_pair = check_currency_pair(**params)
-            #     side = check_side(params["side"])
-            #     timestamp = pd.to_datetime(params["time"])
-            #     size = float(params["size"])
-            #     price = float(params["price"])
-            #     source = self.source
-            #     trade = Trade(currency_pair=currency_pair, side=side,
-            #                   price=price, size=size, timestamp=timestamp,
-            #                   source=source)
-            #     return (trade, )
-            # else:
-            #     return None
+
         return parse
