@@ -21,7 +21,12 @@ Basic Useage
 
     event_loop.run_until_complete(subscriber.subscribe())
 
-
 Demonstration
+-------------
 
     $ python -m meteor --currency_pair BTCUSD ETHGBP
+
+License
+-------
+
+meteor is developed and distributed under the Apache 2.0 license.
