@@ -9,7 +9,7 @@ def check_side(value: typing.Union[int, str, Side]) -> Side:
         value = value.lower()
         if value in ("bid", "buy", "bids", "b"):
             return Side.BID
-        elif value in ("ask", "sell", "asks", "a"):
+        elif value in ("ask", "sell", "asks", "s"):
             return Side.ASK
     elif isinstance(value, int) and value == 1:
         return Side.BID

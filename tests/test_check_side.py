@@ -19,7 +19,7 @@ def test_ask():
     assert check_side("asks") == Side.ASK
     assert check_side(-1) == Side.ASK
     assert check_side("SELL") == Side.ASK
-    assert check_side("a") == Side.ASK
+    assert check_side("s") == Side.ASK
     assert check_side(Side.ASK) == Side.ASK
 
 
