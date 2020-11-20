@@ -23,7 +23,7 @@ class CoinbaseTradeSubscription(Subscription, CoinbaseMixin):
                     "product_ids": [self.product_id]
                 },
                 {
-                    "name": "full",
+                    "name": "matches",
                     "product_ids": [self.product_id]
                 }
             ]
